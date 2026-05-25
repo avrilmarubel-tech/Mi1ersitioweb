@@ -1,67 +1,75 @@
 /* Fondo gris oscuro para toda la página */
 body {
-    background-color: #222222; /* Un gris un poco más profundo para mejorar contraste */
+    background-color: #222222;
     margin: 0;
     padding: 20px;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía un poco más moderna */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Contenedor principal - centra todo */
+/* Contenedor principal - Centra de forma estricta todo en vertical */
 .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
 }
 
-/* Imagen del artista - ¡CORREGIDA PARA SER RESPONSIVA! */
-.imagen-artista {
-    display: block;
-    margin: 20px auto;
-    width: 100%;          /* Se adapta al ancho del contenedor (máximo 800px) */
-    max-width: 500px;     /* Evita que se vea gigantesca en pantallas grandes */
-    height: 400px;        /* Un formato rectangular balanceado */
-    object-fit: cover;    /* Recorta la imagen limpiamente sin deformarla */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Sombra elegante */
-}
-
 /* Título con fondo blanco */
 .titulo {
     background-color: #ffffff;
     color: #222222;
-    text-align: center;
-    padding: 15px 30px;
-    margin: 30px auto 20px auto;
+    width: 100%; /* Ocupa el ancho disponible del contenedor */
+    max-width: 600px; /* Evita que se estire demasiado */
+    padding: 15px 20px;
+    margin: 10px auto 20px auto;
     font-size: 26px;
-    letter-spacing: 2px;  /* Espaciado de letras elegante para nombres largos */
+    letter-spacing: 2px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+/* Imagen del artista */
+.imagen-artista {
+    display: block;
+    width: 100%;          
+    max-width: 500px;     
+    height: 400px;        
+    object-fit: cover;    
+    border-radius: 12px;
+    margin: 10px auto 20px auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Párrafo con fondo blanco */
 .biografia {
     background-color: #ffffff;
     color: #333333;
-    text-align: justify;  /* Justificado se ve mucho más limpio para bloques de texto */
+    text-align: justify;  
+    width: 100%;
+    max-width: 600px; /* Ajustado al mismo ancho máximo del título para simetría */
     padding: 25px 35px;
     margin: 20px auto;
-    line-height: 1.8;     /* Más espacio entre líneas para lectura cómoda */
+    line-height: 1.8;     
     font-size: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 /* Video centrado */
 .contenedor-video {
-    text-align: center;
-    margin: 30px auto;
+    width: 100%;
+    max-width: 640px;
+    margin: 20px auto;
 }
 
 video {
     display: block;
-    margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
